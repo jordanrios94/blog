@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/post/{slug}', 'PostController@index')->name('post');

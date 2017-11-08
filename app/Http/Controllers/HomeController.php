@@ -7,16 +7,6 @@ use App\Post as Post;
 
 class HomeController extends Controller
 {
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
     /**
      * Show the application dashboard.
      *
@@ -24,15 +14,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
-
-
-    public function home()
-    {
         $posts = Post::paginate(5);
-
-        return view('welcome', [
+        
+        return view('pages.home', [
             'posts' => $posts
         ]);
     }
