@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post as Post;
+use App\User as User;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::getPaginatedPosts();
         
         return view('pages.home', [
             'posts' => $posts

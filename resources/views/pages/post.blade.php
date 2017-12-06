@@ -2,10 +2,10 @@
 
 
 @section('content')
+
 <!-- Title -->
 <h1 class="mt-4">{{ $post->title }}</h1>
-
-          <!-- Author -->
+  <!-- Author -->
           <p class="lead">
             by
             <a href="#">Start Bootstrap</a>
@@ -26,6 +26,9 @@
           <!-- Post Content -->
           {!! $post->body !!}
 
+          <hr>
+
+          <div id="comments"></div>
           <hr>
 
           <!-- Comments Form -->

@@ -16,7 +16,7 @@
 </div>
 <div class="card-footer text-muted">
     Posted on January 1, 2017 by
-    <a href="/post/{{ $post->slug }}">Start Bootstrap</a>
+    <a href="/post/{{ $post->slug }}">{{ $post->author_name }}</a>
 </div>
 </div>
 @endforeach
