@@ -27,7 +27,7 @@ class PostController extends Controller
         ]);
         
         // var_dump($slug);
-        var_dump($post);
+        //var_dump($post);
         // die;
     }
 
