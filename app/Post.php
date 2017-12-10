@@ -8,7 +8,12 @@ class Post extends Model
 {
     public function user()
     {
-        return $this->hasMany('App\User', 'id');
+        return $this->hasMany('App\User', 'author_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment', 'post_id', 'id');
     }
 
     public static function getPaginatedPosts()

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post as Post;
+use App\Comment as Comment;
 
 class PostController extends Controller
 {
@@ -16,19 +17,12 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->firstOrFail();
 
-        /* 
-            TODO:
-                - CREATE VIEW FOR POST
-                - 
-        */
+        $comments = $post->comments;
 
         return view('pages.post', [
-            'post' => $post
+            'post'      => $post,
+            'comments'  => $comments
         ]);
-        
-        // var_dump($slug);
-        //var_dump($post);
-        // die;
     }
 
     /**
